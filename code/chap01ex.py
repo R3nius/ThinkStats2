@@ -15,7 +15,7 @@ import thinkstats2
 
 def ReadData(dct_file='2002FemResp.dct', dat_file='2002FemResp.dat.gz'):
     dct = thinkstats2.ReadStataDct(dct_file)
-    df = dct.ReadFixedWidth(dat_file, compression='gzip', usecols=['caseid',  'pregnum'])
+    df = dct.ReadFixedWidth(dat_file, compression='gzip', usecols=['caseid',  'prglngth'])
     return(df)
 
 def main(script):
@@ -26,6 +26,7 @@ def main(script):
     resp = ReadData()
     print(resp)
     print('%s: All tests passed.' % script)
+
 
 
 if __name__ == '__main__':
