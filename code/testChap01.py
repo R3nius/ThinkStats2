@@ -9,13 +9,15 @@
 - finalwgt: weight associated with the respondent
 """
 
-import thinkstats2
+#import thinkstats2
+import readDataFile
 import numpy as np
 import pandas as pd
 import sys
 
+
 def ReadFemPreg(dct_file='2002FemPreg.dct', dat_file='2002FemPreg.dat.gz'):
-    dct = thinkstats2.ReadStataDct(dct_file)
+    dct = readDataFile.ReadStataDct(dct_file)
     df = dct.ReadFixedWidth(dat_file,compression='gzip', usecols=['caseid', 'agepreg', 
     'pregordr', 'prglngth', 'outcome', 'birthwgt_lb', 'birthwgt_oz'])
     
