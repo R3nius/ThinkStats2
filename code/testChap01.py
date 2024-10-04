@@ -9,7 +9,8 @@
 - finalwgt: weight associated with the respondent
 """
 
-#import thinkstats2
+import thinkstats2
+import thinkplot
 import readDataFile
 import numpy as np
 import pandas as pd
@@ -23,7 +24,7 @@ def ReadFemPreg(dct_file='2002FemPreg.dct', dat_file='2002FemPreg.dat.gz'):
     
     #print(FindValue(df))
     #CleanFemPreg(df)
-    print(firstBabyArrival(df))
+    #print(firstBabyArrival(df))
     return(df)
 
 def CleanFemPreg(df):
@@ -55,6 +56,7 @@ def firstBabyArrival(df):
 
     print(f"Percentage of mother who is more than 40 years old and give birth to first baby alive, arrive late: {round(result,2)} %")
     return df
+
 
 def main(script):
     ReadFemPreg()
