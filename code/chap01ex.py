@@ -13,12 +13,18 @@ import sys
 import nsfg
 import thinkstats2
 
+def ReadData(dct_file='2002FemResp.dct', dat_file='2002FemResp.dat.gz'):
+    dct = thinkstats2.ReadStataDct(dct_file)
+    df = dct.ReadFixedWidth(dat_file, compression='gzip', usecols=['caseid',  'pregnum'])
+    return(df)
 
 def main(script):
     """Tests the functions in this module.
 
     script: string script name
     """
+    resp = ReadData()
+    print(resp)
     print('%s: All tests passed.' % script)
 
 

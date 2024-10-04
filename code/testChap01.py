@@ -12,6 +12,7 @@
 import thinkstats2
 import numpy as np
 import pandas as pd
+import sys
 
 def ReadFemPreg(dct_file='2002FemPreg.dct', dat_file='2002FemPreg.dat.gz'):
     dct = thinkstats2.ReadStataDct(dct_file)
@@ -36,4 +37,8 @@ def FindValue(df):
     df = df.loc[df['birthwgt_lb'].isin(some_values) | df['birthwgt_oz'].isin(some_values)]
     return df
 
-ReadFemPreg()
+def main(script):
+    ReadFemPreg()
+
+if __name__ == '__main__':
+    main(*sys.argv)
