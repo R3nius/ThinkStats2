@@ -16,7 +16,8 @@ import sys
 
 def ReadFemPreg(dct_file='2002FemPreg.dct', dat_file='2002FemPreg.dat.gz'):
     dct = thinkstats2.ReadStataDct(dct_file)
-    df = dct.ReadFixedWidth(dat_file,compression='gzip', usecols=['caseid', 'pregordr', 'prglngth', 'outcome', 'birthwgt_lb', 'birthwgt_oz'])
+    df = dct.ReadFixedWidth(dat_file,compression='gzip', usecols=['caseid', 'agepreg', 
+    'pregordr', 'prglngth', 'outcome', 'birthwgt_lb', 'birthwgt_oz'])
     
     #print(FindValue(df))
     #CleanFemPreg(df)
@@ -38,13 +39,19 @@ def FindValue(df):
     df = df.loc[df['birthwgt_lb'].isin(some_values) | df['birthwgt_oz'].isin(some_values)]
     return df
 
-## check percentage of first baby alive arrive late 
+## check percentage of mother who give birth to first baby alive arrive late and 
+# is more than 40 years old
 def firstBabyArrival(df):
     row_count = len(df)
-    df = df.loc[(df['pregordr'] == 1) & (df['outcome'] == 1) & (df['prglngth'] > 39)]
+
+    df['mother_age'] = df.agepreg/48
+    df = df.loc[(df['mother_age'] > 40) & (df['pregordr'] == 1) & 
+                (df['outcome'] == 1) & (df['prglngth'] > 39)]
+    
     compare_row = len(df)
     result = compare_row/row_count *100
-    print(f"Percentage of first baby arrival late is: {round(result,2)} %")
+
+    print(f"Percentage of mother who is more than 40 years old and give birth to first baby alive, arrive late: {round(result,2)} %")
     return df
 
 def main(script):
