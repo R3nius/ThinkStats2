@@ -16,16 +16,11 @@ import pandas as pd
 def ReadFemPreg(dct_file='2002FemPreg.dct', dat_file='2002FemPreg.dat.gz'):
     dct = thinkstats2.ReadStataDct(dct_file)
     df = dct.ReadFixedWidth(dat_file,compression='gzip', usecols=['caseid', 'birthwgt_lb', 'birthwgt_oz'])
-    #print(df.loc[df.birthwgt_lb, 1])
-    #for i in df:
-        #if df.loc[i, df.birthwgt_lb] == 97.00:
-            #print(df.loc[i, df.birthwgt_lb])
-        
+    
     #CleanFemPreg(df)
     FindValue(df)
-    #na_vals = [97, 98, 99]
-    #df = df.loc[df.birthwgt_lb == na_vals, 'birthwgt_lb']
     return df
+    
 """"
 def CleanFemPreg(df):
     df.agepreg /= 100.0
@@ -38,9 +33,9 @@ def CleanFemPreg(df):
 """
 
 def FindValue(df):
-    for i in df.birthwgt_lb:
-        if df['birthwgt_lb'] == 97:
-            print(df['birthwgt_lb'])
+    for i in df:
+        if df.loc[i, df.birthwgt_lb] == 97:
+            df['birthwgt_lb_new'] = df.birthwgt_lb
         i += 1
 
 print (ReadFemPreg()['birthwgt_lb'][1])
