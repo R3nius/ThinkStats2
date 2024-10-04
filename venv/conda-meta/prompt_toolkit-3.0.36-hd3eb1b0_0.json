@@ -1,0 +1,33 @@
+{
+  "build": "hd3eb1b0_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "prompt-toolkit >=3.0.36,<3.0.37.0a0"
+  ],
+  "extracted_package_dir": "/opt/conda/pkgs/prompt_toolkit-3.0.36-hd3eb1b0_0",
+  "files": [],
+  "fn": "prompt_toolkit-3.0.36-hd3eb1b0_0.conda",
+  "license": "BSD-3-Clause",
+  "link": {
+    "source": "/opt/conda/pkgs/prompt_toolkit-3.0.36-hd3eb1b0_0",
+    "type": 1
+  },
+  "md5": "c850976b29e0171af80d2b3725af1c36",
+  "name": "prompt_toolkit",
+  "noarch": "generic",
+  "package_tarball_full_path": "/opt/conda/pkgs/prompt_toolkit-3.0.36-hd3eb1b0_0.conda",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "d8c3954c2235ff8fafbb63a0a021e18b32f6e9724c0247bfe3e89af1dbff73d7",
+  "size": 5120,
+  "subdir": "noarch",
+  "timestamp": 1672387340000,
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/prompt_toolkit-3.0.36-hd3eb1b0_0.conda",
+  "version": "3.0.36"
+}

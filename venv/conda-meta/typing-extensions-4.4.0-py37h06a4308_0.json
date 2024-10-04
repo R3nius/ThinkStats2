@@ -1,0 +1,32 @@
+{
+  "build": "py37h06a4308_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "python >=3.7,<3.8.0a0",
+    "typing_extensions 4.4.0 py37h06a4308_0"
+  ],
+  "extracted_package_dir": "/opt/conda/pkgs/typing-extensions-4.4.0-py37h06a4308_0",
+  "files": [],
+  "fn": "typing-extensions-4.4.0-py37h06a4308_0.conda",
+  "license": "PSF-2.0",
+  "link": {
+    "source": "/opt/conda/pkgs/typing-extensions-4.4.0-py37h06a4308_0",
+    "type": 1
+  },
+  "md5": "26a98504003e1891b0df4f4c3eb476ca",
+  "name": "typing-extensions",
+  "package_tarball_full_path": "/opt/conda/pkgs/typing-extensions-4.4.0-py37h06a4308_0.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "c2c1f2758be192e056ce2b1f5aadca91f6ceb393e5b0e479c261102f3e9b7f77",
+  "size": 8490,
+  "subdir": "linux-64",
+  "timestamp": 1669924624000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/typing-extensions-4.4.0-py37h06a4308_0.conda",
+  "version": "4.4.0"
+}
